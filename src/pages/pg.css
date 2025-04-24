@@ -9,6 +9,17 @@
 body {
   font-family: 'Inter', sans-serif;
 }
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Optional: ensure full-width layout */
+#root {
+  width: 100%;
+  overflow-x: hidden;
+}
 .content{
     background-color: #333;
     padding: 10px;
@@ -52,3 +63,21 @@ body {
     color: aliceblue;
     margin-top: 5px;
   }
+
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fade-in-up {
+    animation-name: fade-in-up;
+    animation-fill-mode: both;
+    animation-timing-function: ease-out;
+  }
+  

@@ -2,78 +2,56 @@ import React from "react";
 import profilpic from '../assets/digs.jpg'
 import './pg.css'
 
-function Skills () {
+const skills = [
+  {
+    title: "HTML & CSS",
+    description: "Semantic markup and responsive design.",
+    image: "https://cdn.simpleicons.org/html5/f06529", // HTML icon
+  },
+  {
+    title: "JavaScript",
+    description: "Dynamic behavior and modern ES6+ syntax.",
+    image: "https://cdn.simpleicons.org/javascript/f7df1e", // JS icon
+  },
+  {
+    title: "React.js",
+    description: "Reusable components and state management.",
+    image: "https://cdn.simpleicons.org/react/61DAFB", // React icon
+  },
+  {
+    title: "PHP & MySQL",
+    description: "Back-end logic and database integration.",
+    image: "https://cdn.simpleicons.org/php/777BB4", // PHP icon
+  },
+]
 
-    return (
-        <>
-        <div className="flex flex-row">
 
-       
-        <div className="flex flex-col items-center justify-center bg-white shadow-xl rounded-2xl p-6 w-full max-w-sm mx-auto mt-10">
-        <div className="flex items-center justify-center mb-4">
+function Skills() {
+  return (
+    <section className="bg-gray-900 text-white py-16 px-6">
+    <div className="max-w-6xl mx-auto text-center">
+      <h2 className="text-4xl font-bold mb-10">My Skills</h2>
+  
+      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        {skills.map((skill, index) => (
+          <div
+            key={index}
+            className="bg-gray-800 p-6 rounded-2xl shadow-lg transform transition-transform duration-300 hover:-translate-y-2 hover:scale-105 flex flex-col items-center text-center"
+          >
             <img
-            src={profilpic}
-            alt="Daniel Digol"
-            className="w-32 h-32 object-cover object-top rounded-full border-4 border-indigo-500"
+              src={skill.image}
+              alt={skill.title}
+              className="w-16 h-16 mb-4 rounded-full object-cover border-2 border-gray-400"
             />
-        </div>
-        <h1 className="text-2xl font-bold text-gray-800">Daniel Digol</h1>
-        <p className="text-sm text-gray-500 mt-1">Software Developer</p>
-
-        <h2 className="text-2xl font-bold text-gray-800">Professional Summary</h2>
-        <p className="flextext-sm text-gray-500 text-justify mt-1">
-            Detail-oriented and tech-savvy Information Technology graduate with hands-on experience as a 
-            Technical Virtual Assistant. Skilled in SEO, data entry, CRM (HubSpot), CMS management, and AI automation using tools like Make and 
-            agentic AI. Proficient in PHP, Java, MySQL, and various digital platforms. Known for adaptability, problem-solving skills, and a commitment 
-            to delivering efficient technical and administrative support in dynamic environments.
-        </p>
-
+            <h3 className="text-xl font-semibold mb-2">{skill.title}</h3>
+            <p className="text-sm text-gray-300">{skill.description}</p>
+          </div>
+        ))}
       </div>
-
-      <div className="flex flex-col items-center justify-center bg-white shadow-xl rounded-2xl p-6 w-full max-w-sm mx-auto mt-10">
-        <div className="flex items-center justify-center mb-4">
-            <img
-            src={profilpic}
-            alt="Daniel Digol"
-            className="w-32 h-32 object-cover object-top rounded-full border-4 border-indigo-500"
-            />
-        </div>
-        <h1 className="text-2xl font-bold text-gray-800">Daniel Digol</h1>
-        <p className="text-sm text-gray-500 mt-1">Software Developer</p>
-
-        <h2 className="text-2xl font-bold text-gray-800">Professional Summary</h2>
-        <p className="flextext-sm text-gray-500 text-justify mt-1">
-            Detail-oriented and tech-savvy Information Technology graduate with hands-on experience as a 
-            Technical Virtual Assistant. Skilled in SEO, data entry, CRM (HubSpot), CMS management, and AI automation using tools like Make and 
-            agentic AI. Proficient in PHP, Java, MySQL, and various digital platforms. Known for adaptability, problem-solving skills, and a commitment 
-            to delivering efficient technical and administrative support in dynamic environments.
-        </p>
-
-      </div>
-
-      <div className="flex flex-col items-center justify-center bg-white shadow-xl rounded-2xl p-6 w-full max-w-sm mx-auto mt-10">
-        <div className="flex items-center justify-center mb-4">
-            <img
-            src={profilpic}
-            alt="Daniel Digol"
-            className="w-32 h-32 object-cover object-top rounded-full border-4 border-indigo-500"
-            />
-        </div>
-        <h1 className="text-2xl font-bold text-gray-800">Daniel Digol</h1>
-        <p className="text-sm text-gray-500 mt-1">Software Developer</p>
-
-        <h2 className="text-2xl font-bold text-gray-800">Professional Summary</h2>
-        <p className="flextext-sm text-gray-500 text-justify mt-1">
-            Detail-oriented and tech-savvy Information Technology graduate with hands-on experience as a 
-            Technical Virtual Assistant. Skilled in SEO, data entry, CRM (HubSpot), CMS management, and AI automation using tools like Make and 
-            agentic AI. Proficient in PHP, Java, MySQL, and various digital platforms. Known for adaptability, problem-solving skills, and a commitment 
-            to delivering efficient technical and administrative support in dynamic environments.
-        </p>
-
-      </div>
-      </div>
-        </>
-    )
+    </div>
+  </section>
+  
+  );
 }
 
 export default Skills;
