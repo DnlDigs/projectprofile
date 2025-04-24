@@ -10,7 +10,7 @@ function App() {
       <Mynavbar />
       <div className="p-4  bg-slate-300 mt-2">
       <Routes>
-          <Route path="/Home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/skills" element={<Skills />} />
       </Routes>
       </div>
